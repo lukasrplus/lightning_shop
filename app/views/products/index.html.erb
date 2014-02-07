@@ -4,53 +4,19 @@
 
   <!-- <div class="catalog_grid"> -->
 
-      <div class="col2">
-
-        <div class="product_picture"></div>
-
-      </div>
+      <% @products.each do |product| %>
 
       <div class="col2">
 
-        <div class="product_picture"></div>
+        <div class="product_picture">
+          <%= image_tag("/assets/products/#{product.picture}", class: "col2") %>
+        </div>
 
       </div>
 
-      <div class="col2">
+      <% end %>
 
-        <div class="product_picture"></div>
 
-      </div>
-
-      <div class="col2">
-
-        <div class="product_picture"></div>
-
-      </div>
-
-      <div class="col2">
-
-        <div class="product_picture"></div>
-
-      </div>
-
-      <div class="col2">
-
-        <div class="product_picture"></div>
-
-      </div>
-
-      <div class="col2">
-
-        <div class="product_picture"></div>
-
-      </div>
-
-      <div class="col2">
-
-        <div class="product_picture"></div>
-
-      </div>
 
   <!-- </div> -->
 
