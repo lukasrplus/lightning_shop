@@ -13,7 +13,7 @@ products = Product.create([{ name: "Baconaise", item_numer: "1", picture: "bacon
                             { name: "Bigfoot Sweater", item_numer: "4", picture: "bigfoot-sweater.jpg", description: "It exists. At least on your sweater.", cost: "$7.99"},
                             { name: "Bigfoot Action Figure", item_numer: "5", picture: "bigfoot.jpg", description: "Barbies are for girls. This is for you. Or your son", cost: "$35.99"},
                             { name: "Weird Ornament", item_numer: "6", picture: "cthulhu.jpg", description: "We have no idea what you can do with it. But it looks fun", cost: "$12.99"},
-                            { name: "The Hat you never wanted", item_numer: "7", picture: "fez.jpg", description: "A great gift for your boss.", cost: "$29.99"},
+                            { name: "The Hat", item_numer: "7", picture: "fez.jpg", description: "A great gift for your boss.", cost: "$29.99"},
                             { name: "Grass Chair", item_numer: "8", picture: "grass-chair.jpg", description: "One of our best-selling items. Comes with a bag of grass for relaxing hours in your yard", cost: "$79.99"},
                             { name: "Lego Anathomy", item_numer: "9", picture: "lego2.jpg", description: "Learn through LEGO", cost: "$9.99"},
                             { name: "Octostache", item_numer: "10", picture: "mustache.jpg", description: "Movember is for your friends. This is for you", cost: "$17.99"},

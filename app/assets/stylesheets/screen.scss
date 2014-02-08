@@ -75,9 +75,31 @@ body {
 .product_picture {
 	width: $col-width*2;
 	height: $col-width*2;
-	background-color: pink;
+	background-color: white;
 	// display: inline-block;
 	margin-top: 20px;
+	text-align: center;
+	margin-bottom: 100px;
+
+		h3 {
+			font-weight: bold;
+			font-size: 14px;
+		}
+
+		button {
+			width: 100%;
+			margin-top: 5px;
+			background-color: black;
+			box-shadow: 0 0 0 #ffffff;
+			color: white;
+			padding-top: 3px;
+			padding-bottom: 3px;
+			font-weight: bold;
+		}
+
+		img {
+			width: 158px;
+		}
 }
 
 .product_info {
