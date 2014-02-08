@@ -9,10 +9,11 @@
       <div class="col2">
 
         <div class="product_picture">
-          <%= image_tag("/assets/products/#{product.picture}", class: "col2") %>
-          <%= product.name %><br>
-          <%= product.description %><br>
-          <%= product.cost %>
+
+          <%= image_tag("/assets/products/#{product.picture}") %>
+          <h3><%= product.name %></h3>
+          <p><%= product.cost %> </p>
+          <button>Add to cart</button>
 
         </div>
 
