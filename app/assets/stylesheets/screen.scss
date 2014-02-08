@@ -101,12 +101,51 @@ body {
 	}
 
 	.cart {
-	height: $col-width*4+$gutter;
-	background-color: grey;
-	position: absolute;
-	top: 80px;
-	right: 40px;
+		height: $col-width*4+$gutter;
+		background-color: gray;
+		position: absolute;
+		top: 80px;
+		right: 40px;
+
+	}
+}
+
+
+// SHOW PAGE
+
+img {
+
+	&.product-display {
+		border: 10px solid red;
+	}
 
 }
+
+section {
+
+	&.product-info {
+		display: inline-block;
+		vertical-align: top;
+
+
+	}
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

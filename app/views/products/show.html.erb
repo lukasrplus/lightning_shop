@@ -1,29 +1,32 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @product.name %>
-</p>
+<section class="container">
 
-<p>
-  <strong>Picture:</strong>
-  <%= @product.picture %>
-</p>
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Cost:</strong>
-  <%= @product.cost %>
-</p>
+  <%= image_tag("products/#{@product.picture}", class: "col4 product-display") %>
 
-<p>
-  <strong>Item numer:</strong>
-  <%= @product.item_numer %>
-</p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @product.description %>
-</p>
+  <section class="col6 product-info">
 
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
+      <strong>Name:</strong>
+      <%= @product.name %>
+
+      <strong>Cost:</strong>
+      <%= @product.cost %>
+
+
+      <strong>Item numer:</strong>
+      <%= @product.item_numer %>
+
+
+      <strong>Description:</strong>
+      <%= @product.description %>
+
+  </section>
+
+  <%#= link_to 'Edit', edit_product_path(@product) %> |
+  <%= link_to 'Back', products_path %>
+
+
+</section>
+
