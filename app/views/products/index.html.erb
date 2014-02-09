@@ -22,15 +22,17 @@
 
           <%= image_tag("/assets/products/#{product.picture}", id: "#{product.id}") %>
 
-          <h3><%= product.name %></h3>
+          <h3><%= link_to product.name, product_url(product.id) %></h3>
 
           <p><%= product.cost %> </p>
 
-          <button>Add to cart</button>
+
+          <button data="<%= product.id %>">Add to cart</button>
 
       </div>
 
   <% end %>
 
 </section>
+
 

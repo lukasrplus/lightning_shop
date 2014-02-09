@@ -29,10 +29,23 @@ $(function() {
     drop: function(event, ui) {
       var product_id = ui.draggable.attr('id');
       console.log(product_id);
-      $.post("http://localhost:3000/lineitems/add_product", {
+      $.post("http://localhost:3000/lineitems/add_product",
+      {
         product_id: product_id
-      });
+      },
+      alert('Item successfully added to your cart.')
+     );
     }
   });
 
+$('.product_picture').children('button').click(function(){
+  var product_id = $(this).attr('data');
+  console.log(product_id);
+  $.post("http://localhost:3000/lineitems/add_product",
+      {
+        product_id: product_id
+      },
+      alert('Item successfully added to your cart.')
+     );
+  });
 });
