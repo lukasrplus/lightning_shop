@@ -50,6 +50,7 @@ body {
 			@include columnify(4);
 			font-size: 24px;
 			padding: 20px 0px;
+			padding-left: 10px;
 			letter-spacing: 3px;
 			display: inline-block;
 		}
