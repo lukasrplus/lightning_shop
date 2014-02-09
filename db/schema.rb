@@ -18,16 +18,6 @@ ActiveRecord::Schema.define(version: 20140209210842) do
     t.datetime "updated_at"
   end
 
-  create_table "line_items", force: true do |t|
-    t.integer  "cart_id"
-    t.integer  "product_id"
-    t.string   "name"
-    t.string   "cost"
-    t.integer  "quantity"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "lineitems", force: true do |t|
     t.string   "name"
     t.string   "cost"

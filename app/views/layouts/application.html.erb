@@ -10,34 +10,29 @@
   <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 
 </head>
+
 <body>
 
-<div class="container">
+  <div class="container">
 
-  <header>
+    <header>
 
-   <!--  <div class="logo">
-      <h2>LIGHTNING SHOP</h2>
-    </div> -->
+      <h2>MR. NICE GUY SHOP <i class="fa fa-bolt"></i></h2>
 
+      <nav>
+        <ul class="navbar">
+          <li class="nav-text">Beer</li>
+          <li class="nav-text">Tools</li>
+          <li class="nav-text">Books</li>
+          <li class="nav-text">Music</li>
+        </ul>
+      </nav>
 
+    </header>
 
-    <div class="navbar">
-
-      <div class="col4 logo">MR. NICE GUY SHOP <i class="fa fa-bolt"></i></div>
-
-      <div class="col2 nav-text">Beer</div>
-      <div class="col2 nav-text">Tools</div>
-      <div class="col2 nav-text">Books</div>
-      <div class="col2 nav-text cart">Music</div>
-
-
-   </div>
-
-  </header>
+    <%= yield %>
 
 
-<%= yield %>
   </div>
 
 

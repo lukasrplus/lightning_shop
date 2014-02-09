@@ -1,72 +1,36 @@
 <div class="catalog">
 
-  <div class="col4">
   <h2>Catalog</h2>
-  </div>
-  <div class="col4"></div>
-  <div class="col4 mycart">
 
-    <h3><i class="fa fa-shopping-cart"></i> Your cart. <span class="subline">Darg items here.</span></h3>
+  <div class="mycart">
 
+    <h3>
+      <i class="fa fa-shopping-cart"></i>
+      Your cart <br>
+      <span class="subline">Drag items here.</span>
+    </h3>
 
   </div>
 
 </div>
 
-  <!-- <div class="catalog_grid"> -->
+<section class="catalog-grid">
 
-      <% @products.each do |product| %>
+  <% @products.each do |product| %>
 
-      <div class="col2">
-
-        <div class="product_picture">
+      <div class="product_picture">
 
           <%= image_tag("/assets/products/#{product.picture}", id: "#{product.id}") %>
-          <h3><%= product.name %></h3>
-          <p><%= product.cost %> </p>
-          <button>Add to cart</button>
 
-        </div>
+          <h3><%= product.name %></h3>
+
+          <p><%= product.cost %> </p>
+
+          <button>Add to cart</button>
 
       </div>
 
-      <% end %>
+  <% end %>
 
+</section>
 
-
-  <!-- </div> -->
-
-
- <!--  <div class="cart col2"></div> -->
-
-<!-- <table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Picture</th>
-      <th>Cost</th>
-      <th>Item numer</th>
-      <th>Description</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @products.each do |product| %>
-      <tr>
-        <td><%= product.name %></td>
-        <td><%= product.picture %></td>
-        <td><%= product.cost %></td>
-        <td><%= product.item_numer %></td>
-        <td><%= product.description %></td>
-        <td><%= link_to 'Show', product %></td>
-        <td><%= link_to 'Edit', edit_product_path(product) %></td>
-        <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table> -->
-
-</div>
