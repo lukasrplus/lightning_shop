@@ -1,5 +1,6 @@
 
 @import "reset";
+@import "library";
 
 
 $primary_font: 'Pathway Gothic One', sans-serif;
@@ -16,28 +17,12 @@ $total-gutter-width: $gutter-count * $gutter;
 $col-width: ($max-width - $total-gutter-width) / $col-count;
 
 
-@mixin columnify($num-of-cols) {
-	width: $col_width * $num-of-cols + $gutter * ($num-of-cols - 1);
-}
-
-@mixin offset($num-of-cols) {
-	margin-left: ($col-width + $gutter) * $num-of-cols;
-}
-
-@mixin shadows {
-	-moz-box-shadow: 1px 1px 3px 4px #ccc;
-  -webkit-box-shadow: 1px 1px 3px 4px #ccc;
-  box-shadow: 1px 1px 3px 4px #ccc;
-}
-
-
 %cart {
 	background-color: black;
 	color: white;
 	margin: 10px 0px;
 	padding: 20px 10px;
 }
-
 
 // GENERAL
 
@@ -192,17 +177,61 @@ section {
 		ul {
 
 			li {
+				margin-top: 10px;
+				position: relative;
 
  				img {
  					max-width: 40px;
+ 					margin-right: 5px;
  				}
 
 
 				p {
 					display: inline-block;
 					vertical-align: top;
-					font-size: 14px;
+					font-size: 20px;
+					margin-top: 10px;
 				}
+
+				b {
+					font-size: 20px;
+					position: absolute;
+					top: 10px;
+					right: 5px;
+				}
+			}
+		}
+
+		strong {
+			font-size: 25px;
+			text-align: right;
+			display: block;
+			margin-top: 20px;
+			font-weight: bold;
+		}
+
+		button {
+			width: 100%;
+			margin-top: 20px;
+			font-size: 25px;
+			color: #fff;
+			background-color: black;
+			border-color: #fff;
+		}
+	}
+
+	&.related-items {
+
+		margin-top: 50px;
+
+		h2 {
+			font-size: 30px;
+			padding-bottom: 20px;
+		}
+
+		div {
+			&.product-tile {
+				@include six-col-product-tiles;
 			}
 		}
 	}
@@ -261,43 +290,7 @@ section {
 
 		div {
 			&.product_picture {
-				@include columnify(2);
-				@include shadows;
-				margin-right: $gutter;
-				background-color: white;
-				display: inline-block;
-				text-align: center;
-				margin-bottom: 30px;
-				padding: 5px 5px;
-
-				img {
-					width: 170px;
-				}
-
-				h3 {
-					font-weight: bold;
-					font-size: 16px;
-					padding-top: 8px
-				}
-
-				p {
-					font-size: 14px;
-				}
-
-				button {
-					width: 100%;
-					margin-top: 5px;
-					background-color: black;
-					box-shadow: 0 0 0 #ffffff;
-					color: white;
-					padding-top: 3px;
-					padding-bottom: 3px;
-					font-weight: bold;
-				}
-
-				&:nth-of-type(6n) {
-					margin-right: 0px;
-				}
+				@include six-col-product-tiles;
 			}
 		}
 	}

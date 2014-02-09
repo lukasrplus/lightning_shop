@@ -1,0 +1,54 @@
+@mixin columnify($num-of-cols) {
+  width: $col_width * $num-of-cols + $gutter * ($num-of-cols - 1);
+}
+
+@mixin offset($num-of-cols) {
+  margin-left: ($col-width + $gutter) * $num-of-cols;
+}
+
+@mixin shadows {
+  -moz-box-shadow: 1px 1px 3px 4px #ccc;
+  -webkit-box-shadow: 1px 1px 3px 4px #ccc;
+  box-shadow: 1px 1px 3px 4px #ccc;
+}
+
+
+@mixin six-col-product-tiles {
+  @include columnify(2);
+  @include shadows;
+  margin-right: $gutter;
+  background-color: white;
+  display: inline-block;
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 5px 5px;
+
+  img {
+    width: 170px;
+  }
+
+  h3 {
+    font-weight: bold;
+    font-size: 16px;
+    padding-top: 8px
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  button {
+    width: 100%;
+    margin-top: 5px;
+    background-color: black;
+    box-shadow: 0 0 0 #ffffff;
+    color: white;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    font-weight: bold;
+  }
+
+  &:nth-of-type(6n) {
+    margin-right: 0px;
+  }
+}

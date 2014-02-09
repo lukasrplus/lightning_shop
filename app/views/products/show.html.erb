@@ -35,26 +35,26 @@
             <li>
               <%= image_tag "products/#{@product.picture}" %>
                 <p>Baconaise</p>
-                <p>$100</p>
+                <b>$100</b>
 
             </li>
 
             <li>
               <%= image_tag "products/#{@product.picture}" %>
               <p>Baconaise</p>
-              <p>$100</p>
+              <b>$100</b>
             </li>
 
             <li>
               <%= image_tag "products/#{@product.picture}" %>
               <p>Baconaise</p>
-              <p>$100</p>
+              <b>$100</b>
             </li>
 
             <li>
               <%= image_tag "products/#{@product.picture}" %>
               <p>Baconaise</p>
-              <p>$100</p>
+              <b>$100</b>
             </li>
 
 
@@ -65,6 +65,29 @@
 
         <button>Checkout</button>
 
+
+      </section>
+
+
+      <section class="related-items">
+
+        <h2>Related Items</h2>
+
+        <% @relatedProducts.each do |product| %>
+
+          <div class="product-tile">
+
+          <%= image_tag("/assets/products/#{product.picture}", id: "#{product.id}") %>
+
+          <h3><%= product.name %></h3>
+
+          <p><%= product.cost %> </p>
+
+          <button>Add to cart</button>
+
+      </div>
+
+        <% end %>
 
       </section>
 

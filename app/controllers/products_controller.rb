@@ -12,7 +12,7 @@ class ProductsController < ApplicationController
   # GET /products/1.json
   def show
 
-
+    @relatedProducts = Product.all.sample(6)
 
   end
 
