@@ -37,7 +37,8 @@ body {
 }
 .col4 {
 	width: $col-width*4;
-	margin-right: $gutter;
+	margin-right: $gutter*2;
+	display: inline-block;
 }
 .col5 {
 	width: $col-width*5;
@@ -45,7 +46,8 @@ body {
 }
 .col6 {
 	width: $col-width*6;
-	margin-right: $gutter;
+	margin-right: $gutter*6;
+	display: inline-block;
 }
 .col7 {
 	width: $col-width*7;
@@ -106,53 +108,57 @@ body {
 	width: $col-width*2;
 }
 
+// HEADER
 
+	header {
+		background-color: black;
+		color: white;
+		display: inline-block;
 
-// CATALOG PAGE
+		.navbar {
+			background-color: black;
+			color: white;
+			font-size: 18px;
+			font-weight: bold;
+			text-align: left;
+		}
 
-.catalog {
-	// position: relative;
-	h1 {
-		font-size: 60px;
-		font-family: $primary_font;
+		.logo {
+			font-size: 24px;
+			padding: 20px 10px;
+			letter-spacing: 3px;
+		}
+
+		.cart {
+			width: 150px;
+		}
+
+		.nav-text {
+			letter-spacing: 3px;
+		}
 	}
 
-	.catalog_grid {
-		width: $col-width*10+$gutter*5;
-		font-size: 0;
-	}
 
-	.cart {
-		height: $col-width*4+$gutter;
-		background-color: gray;
-		position: absolute;
-		top: 80px;
-		right: 40px;
 
+
+
+div {
+	img {
+		&.product-display {
+			border: 10px solid red;
+			margin-top: 40px
+		}
 	}
 }
 
 
-// SHOW PAGE
-
-img {
-
-	&.product-display {
-		border: 10px solid red;
-		margin-top: 40px
-	}
-
-}
 
 section {
-
-
 	&.product-info {
 		display: inline-block;
 		vertical-align: top;
 		position: relative;
 		margin-top: 40px;
-
 
 		h2 {
 
@@ -197,7 +203,6 @@ section {
 				font-size: 20px;
 			}
 		}
-
 	}
 
 	&.cart-preview {
@@ -215,6 +220,7 @@ section {
 		}
 
 		ul {
+
 			li {
 
  				img {
@@ -226,17 +232,9 @@ section {
 					display: inline-block;
 					vertical-align: top;
 				}
-
-
 			}
-
-
 		}
-
-
 	}
-
-
 }
 
 
@@ -244,15 +242,36 @@ section {
 
 
 
+// CATALOG PAGE
 
+.catalog {
+	// position: relative;
 
+	h2 {
+		font-size: 24px;
+		font-weight: bold;
+	}
 
+	.catalog_grid {
+		width: $col-width*10+$gutter*5;
+		font-size: 0;
+	}
 
+	.col4.mycart {
+		background-color: black;
+		color: white;
+		margin-right: 0px;
+		width: 360px;
+		margin: 10px 0px;
+		padding: 20px 10px;
 
+		h3 {
+			font-size: 20px;
+		}
 
-
-
-
-
-
+		.subline {
+			font-size: 16px;
+		}
+	}
+}
 
