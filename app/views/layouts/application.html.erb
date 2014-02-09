@@ -7,10 +7,34 @@
   <%= csrf_meta_tags %>
 
   <link href='http://fonts.googleapis.com/css?family=Pathway+Gothic+One|Quattrocento+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 
 </head>
 <body>
-  <div class="container">
+
+<div class="container">
+
+  <header>
+
+   <!--  <div class="logo">
+      <h2>LIGHTNING SHOP</h2>
+    </div> -->
+
+
+
+    <div class="navbar">
+
+      <div class="col4 logo">MR. NICE GUY SHOP <i class="fa fa-bolt"></i></div>
+      <div class="col2 nav-text">Beer</div>
+      <div class="col2 nav-text">Tools</div>
+      <div class="col2 nav-text">Books</div>
+      <div class="col2 nav-text cart">Music</div>
+
+
+    </ul>
+
+  </header>
+
 
 <%= yield %>
   </div>
