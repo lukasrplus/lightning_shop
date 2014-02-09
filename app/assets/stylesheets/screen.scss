@@ -9,6 +9,16 @@ $col-width: 80px;
 $gutter: 20px;
 
 
+%cart {
+	background-color: black;
+	color: white;
+	margin-right: 0px;
+	width: 360px;
+	margin: 10px 0px;
+	padding: 20px 10px;
+}
+
+
 // GENERAL
 
 body {
@@ -36,8 +46,8 @@ body {
 	margin-right: $gutter;
 }
 .col4 {
-	width: $col-width*4;
-	margin-right: $gutter*2;
+	width: $col-width*4 + $gutter;
+	margin-right: $gutter;
 	display: inline-block;
 }
 .col5 {
@@ -45,8 +55,8 @@ body {
 	margin-right: $gutter;
 }
 .col6 {
-	width: $col-width*6;
-	margin-right: $gutter*6;
+	width: $col-width*6 + $gutter * 2;
+	margin-right: $gutter;
 	display: inline-block;
 }
 .col7 {
@@ -257,12 +267,7 @@ section {
 	}
 
 	.col4.mycart {
-		background-color: black;
-		color: white;
-		margin-right: 0px;
-		width: 360px;
-		margin: 10px 0px;
-		padding: 20px 10px;
+		@extend %cart;
 
 		h3 {
 			font-size: 20px;
