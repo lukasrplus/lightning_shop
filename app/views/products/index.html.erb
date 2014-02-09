@@ -21,7 +21,7 @@
 
         <div class="product_picture">
 
-          <%= image_tag("/assets/products/#{product.picture}") %>
+          <%= image_tag("/assets/products/#{product.picture}", id: "#{product.id}") %>
           <h3><%= product.name %></h3>
           <p><%= product.cost %> </p>
           <button>Add to cart</button>

@@ -4,7 +4,8 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-    @products = Product.all
+    session[:cart_id] = Cart.create.id unless session[:cart_id].present?
+    @products = Product.all.shuffle
   end
 
   # GET /products/1

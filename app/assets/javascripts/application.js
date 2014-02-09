@@ -12,5 +12,27 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.ui.draggable
+//= require jquery.ui.droppable
 //= require turbolinks
 //= require_tree .
+
+$(function() {
+
+  $('.product_picture').children('img').draggable({
+    helper: "clone"
+  });
+
+  $('.mycart').droppable({
+    activeClass: 'droppable',
+    tolerance: 'touch',
+    drop: function(event, ui) {
+      var product_id = ui.draggable.attr('id');
+      console.log(product_id);
+      $.post("http://localhost:3000/lineitems/add_product", {
+        product_id: product_id
+      });
+    }
+  });
+
+});

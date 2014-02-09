@@ -140,7 +140,7 @@ body {
 		}
 
 		.cart {
-			width: 150px;
+			width: 140px;
 		}
 
 		.nav-text {
@@ -257,8 +257,8 @@ section {
 	// position: relative;
 
 	h2 {
-		font-size: 24px;
-		font-weight: bold;
+		font-size: 52px;
+		margin-top: 20px;
 	}
 
 	.catalog_grid {
@@ -268,6 +268,12 @@ section {
 
 	.col4.mycart {
 		@extend %cart;
+
+		&.droppable {
+			background-color: pink;
+			color: black;
+			height: 150px;
+		}
 
 		h3 {
 			font-size: 20px;
