@@ -2,10 +2,10 @@
 
       <p id="notice"><%= notice %></p>
 
-      <%= image_tag("products/#{@product.picture}", class: "col4 product-display") %>
+      <%= image_tag("products/#{@product.picture}", class: "product-display") %>
 
 
-      <section class="col6 product-info">
+      <section class="product-info">
 
           <h2 class="product-name-header"><%= @product.name %></h2>
 
@@ -26,7 +26,7 @@
       </section>
 
 
-      <section class="col2 cart-preview">
+      <section class="cart-preview">
 
         <h3>Your Cart</h3>
 
