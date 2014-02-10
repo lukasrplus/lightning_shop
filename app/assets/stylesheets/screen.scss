@@ -46,14 +46,24 @@ body {
 		color: white;
 		font-size: 0px;
 
-		h2 {
-			@include columnify(4);
-			font-size: 24px;
-			padding: 20px 0px;
-			padding-left: 10px;
-			letter-spacing: 3px;
-			display: inline-block;
+		a {
+
+			&:visited {
+				text-decoration: none;
+				color: #fff;
+			}
+
+			h2 {
+				@include columnify(4);
+				font-size: 24px;
+				padding: 20px 0px;
+				padding-left: 10px;
+				letter-spacing: 3px;
+				display: inline-block;
+			}
+
 		}
+
 
 		nav {
 			display: inline-block;
