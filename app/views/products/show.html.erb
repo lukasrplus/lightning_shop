@@ -17,7 +17,7 @@
             <%= @product.description %>
           </p>
 
-          <%= link_to "Add to Cart", nil, class: "add-to-cart-btn" %>
+          <%= link_to "Add to Cart", nil, class: "add-to-cart-btn", id: @product.id %>
 
           <p class="product-cost">
             $ <%= number_with_precision(@product.cost, :precision => 2) %>

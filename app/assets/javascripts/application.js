@@ -48,4 +48,21 @@ $('.product_picture').children('button').click(function(){
       alert('Item successfully added to your cart.')
      );
   });
+
+$('.add-to-cart-btn').click(function() {
+  var product_id = $(this).attr('id');
+    $.post("http://serene-tor-6740.herokuapp.com/lineitems/add_product",
+      {
+        product_id: product_id
+      },
+      alert('Item successfully added to your cart.')
+     );
+    location.reload();
 });
+
+
+
+
+});
+
+
