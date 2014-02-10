@@ -24,8 +24,8 @@ ActiveRecord::Schema.define(version: 20140210002214) do
     t.integer  "product_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "quantity",   default: 0
-    t.decimal  "cost"
+    t.integer  "quantity",                           default: 0
+    t.decimal  "cost",       precision: 2, scale: 0
   end
 
   create_table "products", force: true do |t|
@@ -35,7 +35,7 @@ ActiveRecord::Schema.define(version: 20140210002214) do
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.decimal  "cost"
+    t.decimal  "cost",        precision: 2, scale: 0
   end
 
 end
