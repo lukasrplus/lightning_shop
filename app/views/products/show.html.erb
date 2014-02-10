@@ -20,7 +20,7 @@
           <%= link_to "Add to Cart", nil, class: "add-to-cart-btn" %>
 
           <p class="product-cost">
-            <%= @product.cost %>
+            $ <%= number_with_precision(@product.cost, :precision => 2) %>
           </p>
 
       </section>
@@ -32,38 +32,27 @@
 
           <ul>
 
+            <% subtotal = 0 %>
+
+            <%= @lineitems.each do |item| %>
+            <% product = Product.find_by(:id => item.product_id) %>
+
+            <% subtotal += (item.cost)*item.quantity %>
             <li>
-              <%= image_tag "products/#{@product.picture}" %>
-                <p>Baconaise</p>
-                <b>$100</b>
+                <%= image_tag "products/#{product.picture}" %>
+                <p><%= item.name %></p>
+                <b>$ <%= number_with_precision((item.cost)*item.quantity, :precision => 2) %></b>
 
             </li>
 
-            <li>
-              <%= image_tag "products/#{@product.picture}" %>
-              <p>Baconaise</p>
-              <b>$100</b>
-            </li>
-
-            <li>
-              <%= image_tag "products/#{@product.picture}" %>
-              <p>Baconaise</p>
-              <b>$100</b>
-            </li>
-
-            <li>
-              <%= image_tag "products/#{@product.picture}" %>
-              <p>Baconaise</p>
-              <b>$100</b>
-            </li>
-
+            <% end %>
 
 
           </ul>
 
-        <strong>Subtotal: $1000</strong>
+        <strong>Subtotal: $ <%= number_with_precision(subtotal, :precision => 2) %></strong>
 
-        <button>Checkout</button>
+        <button class="btn-reverse">Checkout</button>
 
 
       </section>
@@ -81,7 +70,7 @@
 
           <h3><%= link_to product.name, product_url(product.id) %></h3>
 
-          <p><%= product.cost %> </p>
+          <p><%= number_with_precision(product.cost, :precision => 2) %> </p>
 
           <button data="<%= product.id %>">Add to cart</button>
 

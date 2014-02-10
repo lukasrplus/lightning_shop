@@ -14,6 +14,10 @@ class ProductsController < ApplicationController
 
     @relatedProducts = Product.all.sample(6)
 
+    cart = Cart.find_by(:id => session[:cart_id])
+    @lineitems = Lineitem.where(:cart_id => cart.id)
+
+
   end
 
   # GET /products/new

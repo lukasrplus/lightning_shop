@@ -24,7 +24,7 @@
 
           <h3><%= link_to product.name, product_url(product.id) %></h3>
 
-          <p><%= product.cost %> </p>
+          <p>$ <%= number_with_precision(product.cost, :precision => 2) %> </p>
 
 
           <button data="<%= product.id %>">Add to cart</button>

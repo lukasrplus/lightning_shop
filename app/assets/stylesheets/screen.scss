@@ -175,6 +175,16 @@ section {
 			margin-bottom: 15px;
 		}
 
+		button {
+			&.btn-reverse {
+				background-color: white;
+				font-size: 20px;
+				color: black;
+				text-align: center;
+				padding: 15px 20px;
+			}
+		}
+
 		ul {
 
 			li {
@@ -190,12 +200,12 @@ section {
 				p {
 					display: inline-block;
 					vertical-align: top;
-					font-size: 20px;
+					font-size: 14px;
 					margin-top: 10px;
 				}
 
 				b {
-					font-size: 20px;
+					font-size: 14px;
 					position: absolute;
 					top: 10px;
 					right: 5px;
