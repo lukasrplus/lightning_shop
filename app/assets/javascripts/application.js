@@ -29,7 +29,7 @@ $(function() {
     drop: function(event, ui) {
       var product_id = ui.draggable.attr('id');
       console.log(product_id);
-      $.post("http://serene-tor-6740.herokuapp.com//lineitems/add_product",
+      $.post("http://serene-tor-6740.herokuapp.com/lineitems/add_product",
       {
         product_id: product_id
       },
