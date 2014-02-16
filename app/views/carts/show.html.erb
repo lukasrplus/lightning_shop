@@ -9,75 +9,34 @@
 
   <ul>
 
+    <% subtotal = 0 %>
+
+    <%= @lineitems.each do |item| %>
+
+    <% product = Product.find_by(:id => item.product_id) %>
+
+    <% subtotal += (item.cost)*item.quantity %>
+
 
     <li>
 
       <%= link_to "X", nil, class: "delete-line-item" %>
 
-      <%= image_tag "http://www.placecage.com/c/200/200" %>
+      <%= image_tag "products/#{product.picture}" %>
 
-      <p class="item-name">Baconaise</p>
+      <p class="item-name"><%= item.name %></p>
 
       <div class="item-data">
 
-        <p class="item-qty">Qty: 2</p>
+        <p class="item-qty">QNT: <%= item.quantity %></p>
         <br>
-        <p class="item-price">$100</p>
+        <p class="item-price">$ <%= number_with_precision((item.cost)*item.quantity, :precision => 2) %></p>
 
       </div>
 
     </li>
-    <li>
 
-      <%= link_to "X", nil, class: "delete-line-item" %>
-
-      <%= image_tag "http://www.placecage.com/c/200/200" %>
-
-      <p class="item-name">Baconaise</p>
-
-      <div class="item-data">
-
-        <p class="item-qty">Qty: 2</p>
-        <br>
-        <p class="item-price">$100</p>
-
-      </div>
-
-    </li>
-    <li>
-
-      <%= link_to "X", nil, class: "delete-line-item" %>
-
-      <%= image_tag "http://www.placecage.com/c/200/200" %>
-
-      <p class="item-name">Baconaise</p>
-
-      <div class="item-data">
-
-        <p class="item-qty">Qty: 2</p>
-        <br>
-        <p class="item-price">$100</p>
-
-      </div>
-
-    </li>
-    <li>
-
-      <%= link_to "X", nil, class: "delete-line-item" %>
-
-      <%= image_tag "http://www.placecage.com/c/200/200" %>
-
-      <p class="item-name">Baconaise</p>
-
-      <div class="item-data">
-
-        <p class="item-qty">Qty: 2</p>
-        <br>
-        <p class="item-price">$100</p>
-
-      </div>
-
-    </li>
+   <% end %>
 
   </ul>
 
@@ -86,7 +45,7 @@
 <section class="cart-total">
 
 
-<h2>Total: $200</h2>
+<h2>Total: $ <%= number_with_precision(subtotal, :precision => 2) %></h2>
 
 <%= link_to "Proceed to Checkout", nil, class: "checkout" %>
 

@@ -90,6 +90,10 @@ body {
 							&:nth-of-type(4n) {
 								margin-right: 0px;
 							}
+							a {
+								text-decoration: none;
+								color: white;
+							}
 						}
 					}
 				}
@@ -327,6 +331,7 @@ section {
 	&.cart-header {
 		h2 {
 			font-size: 50px;
+			font-weight: bold;
 			color: black;
 			margin-top: 40px;
 		}
@@ -366,7 +371,8 @@ section {
 					vertical-align: top;
 
 					&.item-name {
-						font-size: 80px;
+						font-size: 60px;
+						font-weight: bold;
 						color: black;
 						display: inline-block;
 						@include columnify(6);

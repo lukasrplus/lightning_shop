@@ -24,7 +24,8 @@
           <li class="nav-text">Beer</li>
           <li class="nav-text">Tools</li>
           <li class="nav-text">Books</li>
-          <li class="nav-text">Music</li>
+          <% cart_id = session[:cart_id] %>
+          <li class="nav-text"><%= link_to "Cart", "/carts/#{cart_id}" %></li>
         </ul>
       </nav>
 
