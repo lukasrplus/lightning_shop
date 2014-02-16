@@ -28,7 +28,7 @@ $(function() {
     drop: function(event, ui) {
       var product_id = ui.draggable.attr('id');
       console.log(product_id);
-      $.post("http://http://serene-tor-6740.herokuapp.com/lineitems/add_product",
+      $.post("http://serene-tor-6740.herokuapp.com/lineitems/add_product",
       {
         product_id: product_id
       },
@@ -40,7 +40,7 @@ $(function() {
 $('.product_picture').children('button').click(function(){
   var product_id = $(this).attr('data');
   console.log(product_id);
-  $.post("http://http://serene-tor-6740.herokuapp.com/lineitems/add_product",
+  $.post("http://serene-tor-6740.herokuapp.com/lineitems/add_product",
       {
         product_id: product_id
       },
@@ -52,7 +52,7 @@ $('.add-to-cart-btn').click(function() {
     $(this).preventDefault;
     console.log('Hello Click');
     var product_id = $(this).attr('id');
-    $.post("http://http://serene-tor-6740.herokuapp.com/lineitems/add_product",
+    $.post("http://serene-tor-6740.herokuapp.com/lineitems/add_product",
       {
         product_id: product_id
       },
